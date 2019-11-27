@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Complete_info_Activity"
+    tools:showIn="@layout/activity_complete_info_">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Complete Your Profile"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24dp"
+            android:gravity="center"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/logo">
+
+            <EditText
+                android:id="@+id/et_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:drawablePadding="15dp"
+                android:inputType="text"
+                android:hint="Enter Fullname" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/fullname">
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:drawablePadding="15dp"
+                android:inputType="textEmailAddress"
+                android:hint="Enter Email" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/email"
+            android:layout_marginTop="10dp"
+            android:weightSum="2.0">
+
+            <LinearLayout
+                android:id="@+id/lv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_registration_mobile_country_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:padding="2dp"
+                    android:layout_marginLeft="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/india_flag" />
+
+
+                <TextView
+                    android:id="@+id/spinner_registration_mobile_country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="center"
+
+                    android:text="+91"
+                    android:inputType="phone"
+                    android:minHeight="45dp"
+                    android:textSize="16sp"
+                    android:minWidth="60dp"
+                    />
+
+                <EditText
+                    android:id="@+id/field_phone_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="@string/hint_enter_your_number"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:minHeight="45dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/rl_phone"
+            android:layout_marginTop="40dp"
+            android:text="Save Information"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:background="@drawable/round_cornel" />
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".My_Profile_Activity"
+    tools:showIn="@layout/activity_my__profile_">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/aa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInput_Username"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/aa"
+            app:passwordToggleEnabled = "true"
+            app:passwordToggleTint="@color/colorPrimary"
+            >
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_above="@+id/button2"
+                android:layout_alignStart="@+id/textView15"
+                android:layout_marginBottom="175dp"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:ems="10"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimary"
+                android:hint="Username"
+                android:imeOptions="actionUnspecified"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInput_gender"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/textInput_Username"
+
+            >
+
+            <EditText
+                android:id="@+id/et_cgender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_above="@+id/button2"
+                android:layout_alignStart="@+id/textView15"
+                android:paddingLeft="10dp"
+                android:ems="10"
+                android:drawableLeft="@drawable/ic_wc_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorPrimary"
+                android:hint="Gender"
+                android:editable="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInput_cdate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/textInput_gender">
+            <EditText
+                android:id="@+id/datepicker"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Date of Birth"
+                android:paddingLeft="10dp"
+                android:onClick="showDatePickerDialog"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:drawablePadding="10dp"
+                android:inputType="date"
+                android:editable="false"
+                android:focusable="false"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold" />
+            >
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textInput_pass"
+            android:layout_alignStart="@+id/textInput_cdate"
+            android:layout_marginTop="10dp"
+            android:text="Gender"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/R_im"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/gender"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/User"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/et_Lname"
+                android:layout_alignStart="@+id/radioGroup"
+                android:layout_alignBottom="@+id/et_Lname"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.35"
+                android:text="Male" />
+
+
+            <RadioButton
+                android:id="@+id/Worker"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Female"
+                android:layout_alignBottom="@+id/Female"
+                android:layout_toEndOf="@+id/Female"
+                android:layout_weight="0.29"
+                android:text="Female" />
+        </RadioGroup>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInput_pass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimary"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            android:layout_below="@+id/textInput_cdate">
+            <EditText
+                android:id="@+id/et_cpassword"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Change Password"
+                android:paddingLeft="10dp"
+                android:drawablePadding="15dp"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/ic_lock_outline_prim_24dp"
+                android:drawableStart="@drawable/ic_lock_outline_prim_24dp"
+
+                android:drawableTint="@color/colorPrimary"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold" />
+            >
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/save"
+            style="?android:textAppearanceSmall"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/R_im"
+            android:background="@drawable/round_cornel"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:text="Save "
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</ScrollView>

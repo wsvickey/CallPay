@@ -1,0 +1,23 @@
+add adcharge_sdk-release.aar and adcharge_api_sdk-release.aar to your project as for
+https://developer.android.com/studio/projects/android-library.html#AddDependency
+
+
+add folowing to your build.gradle
+
+dependencies {
+//.....your's project dependencies
+
+    // >>> start of AdCharge dependencies
+    // dependencies for AdCharge API wrapper
+    implementation project(':adcharge_api_sdk-release')
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.8.1'
+    implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '3.10.0'
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:3.0.0-RC1"
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.7.5'
+    //
+    // dependencies for AdCharge SDK
+    implementation project(":adcharge_sdk-release")
+    implementation 'com.google.android.gms:play-services-location:11.0.4'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    // <<< end of AdCharge dependencies
+}

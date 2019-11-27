@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="greyBorderBanner">#646261</color>
+    <color name="slideInputBg">#c5ffffff</color>
+    <color name="white">#fff</color>
+    <string name="adds">Adds</string>
+    <string name="app_name" translatable="false">AdCharge</string>
+    <string name="fa_icon_angle_double_up"></string>
+    <string name="fa_icon_ellipsis_h"></string>
+    <string name="fa_icon_eye_slash"></string>
+    <string name="fa_icon_times_circle"></string>
+    <string name="hide_this_banner">Hide this banner</string>
+    <string name="move">Move</string>
+</resources>

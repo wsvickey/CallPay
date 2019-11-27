@@ -1,0 +1,1 @@
+include ':app', ':adcharge_sdk-release', ':adcharge_api_sdk-release'

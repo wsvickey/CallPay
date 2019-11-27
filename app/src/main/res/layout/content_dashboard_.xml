@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Dashboard_Activity"
+
+    tools:showIn="@layout/app_bar_dashboard_">
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Balance Amount"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/balance"
+        android:layout_width="285dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="30dp"
+        android:paddingLeft="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+
+
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableTint="@color/colorPrimary"
+            android:src="@drawable/ic_indian_rupee_svg_01"/>
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="211dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balance"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text=" *Maximum redeem limit in a day is 100"/>
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text=" *Amount will be transfered to your PAYTM Account"/>
+
+
+    <LinearLayout
+        android:id="@+id/lnr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t2"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/redeam_50"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/redeam50_light"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginTop="5dp"
+            android:text="Redeem  Tokens"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+
+        <ImageButton
+            android:id="@+id/redeam_100"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+
+            android:layout_marginTop="5dp"
+
+            android:background="@drawable/redeam100_light"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/manage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/lnr"
+        android:background="@drawable/border_corner_nofill"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:text='Manage Ads &amp; Categories'
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        />
+</RelativeLayout>

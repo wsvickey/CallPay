@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Register_Activity">
+
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/callpay_logo_dark"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/logo">
+
+        <EditText
+            android:id="@+id/et_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawablePadding="15dp"
+            android:inputType="text"
+            android:hint="Enter Fullname" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/fullname">
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawablePadding="15dp"
+            android:inputType="text"
+            android:hint="Enter Username" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textInput_cdate">
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawablePadding="15dp"
+            android:inputType="textEmailAddress"
+            android:hint="Enter Email" />
+
+    </android.support.design.widget.TextInputLayout>
+<TextView
+    android:id="@+id/txt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/email"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:textColor="@color/red"
+    android:text="Note :Please Enter valid Mobile Number that is Registered with your Paytm account"/>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInput_cdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/password"
+
+        >
+        <EditText
+            android:id="@+id/datepicker"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawablePadding="15dp"
+            android:inputType="date"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Date of Birth" />
+        >
+    </android.support.design.widget.TextInputLayout>
+       <ImageView
+           android:id="@+id/iv_date"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+          android:layout_alignBottom="@+id/textInput_cdate"
+           android:layout_alignRight="@+id/textInput_cdate"
+           android:padding="2dp"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="10dp"
+           android:scaleType="centerCrop"
+           android:src="@drawable/ic_date_range_black_24dp" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPrimaryDark"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        android:layout_below="@+id/username">
+
+        <EditText
+            android:id="@+id/ed_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawablePadding="15dp"
+            android:inputType="textPassword"
+            android:hint="Enter password" />
+
+    </android.support.design.widget.TextInputLayout>
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/txt"
+        android:layout_marginTop="10dp"
+        android:weightSum="2.0">
+
+        <LinearLayout
+            android:id="@+id/lv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/iv_registration_mobile_country_flag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:padding="2dp"
+                android:layout_marginLeft="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/india_flag" />
+
+
+            <TextView
+                android:id="@+id/spinner_registration_mobile_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+
+                android:text="+91"
+                android:inputType="phone"
+                android:minHeight="45dp"
+                android:textSize="16sp"
+                android:minWidth="60dp"
+              />
+
+            <EditText
+                android:id="@+id/field_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="@string/hint_enter_your_number"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:minHeight="45dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lv2"
+            android:layout_alignStart="@+id/textInput_cdate"
+android:textColor="@color/colorPrimaryDark"
+            android:text="Gender"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
+        <RadioGroup
+            android:id="@+id/R_im"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/gender"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/User"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/et_Lname"
+                android:layout_alignStart="@+id/radioGroup"
+                android:layout_alignBottom="@+id/et_Lname"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.35"
+                android:text="Male" />
+
+
+            <RadioButton
+                android:id="@+id/Worker"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Female"
+                android:layout_alignBottom="@+id/Female"
+                android:layout_toEndOf="@+id/Female"
+                android:layout_weight="0.29"
+                android:text="Female" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/rl_phone"
+        android:layout_marginTop="20dp"
+        android:text="Save Information"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:background="@drawable/round_cornel" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_below="@+id/signup"
+    android:gravity="center"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        android:text="Already have an account ?"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/text"
+
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:text="Sign In"/>
+
+</RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>
